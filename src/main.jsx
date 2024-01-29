@@ -8,6 +8,7 @@ import AboutMe from './components/AboutMe.jsx';
 import Portfolio from './components/Portfolio.jsx';
 import Contact from './components/Contact.jsx';
 import Resume from './components/Resume.jsx';
+import ErrorPage from './components/ErrorPage.jsx';
 
 const router = createBrowserRouter([
   {
@@ -24,7 +25,7 @@ const router = createBrowserRouter([
         element: <Portfolio />,
       },
       {
-        path: 'about',
+        path: 'contact',
         element: <Contact />,
       },
       {

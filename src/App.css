@@ -1,8 +1,9 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
   text-align: center;
+  min-width: 100%;
+  min-height: 100%;
 }
 
 .logo {
@@ -35,8 +36,48 @@
 
 .card {
   padding: 2em;
+  width: 25%;
+  height: 20%;
 }
 
 .read-the-docs {
   color: #888;
+}
+
+.header {
+  background-color: rgb(2, 78, 78);
+  display: flex;
+  flex-direction: row;
+  height: 6em;
+}
+
+.nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.nav ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.portfolio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.aboutme {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: left;
+  text-align: left;
+  padding: 2em;
 }

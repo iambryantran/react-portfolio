@@ -2,7 +2,7 @@ import { FaGithub, FaLinkedin } from 'react-icons/fa';
 
 const Footer = () => {
     return (
-        <footer>
+        <footer className="footer">
             <div className="footer-icons">
                 <a href="https://github.com/iambryantran" target="_blank" rel="noopener noreferrer">
                     <FaGithub />

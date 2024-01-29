@@ -3,10 +3,10 @@ import { useState } from 'react';
 
 const Navigation = () => {
     return (
-        <nav>
+        <nav className="nav">
             <ul>
                 <li>
-                    <Link to="/about">About Me</Link>
+                    <Link to="/">About Me</Link>
                 </li>
                 <li>
                     <Link to="/portfolio">Portfolio</Link>
