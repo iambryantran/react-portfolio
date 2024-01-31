@@ -34,10 +34,15 @@
   }
 }
 
-.card {
+.card-container {
   padding: 2em;
-  width: 25%;
+  width: 30%;
   height: 20%;
+  background-color: aquamarine;
+  border: 3px solid #888;
+  justify-content: center;
+  align-items: left;
+  text-align: left;
 }
 
 .read-the-docs {
@@ -66,13 +71,6 @@
   width: 100%;
 }
 
-.portfolio {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
-}
-
 .aboutme {
   display: flex;
   flex-direction: column;
@@ -80,4 +78,20 @@
   align-items: left;
   text-align: left;
   padding: 2em;
+}
+/* .portfolio {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: left;
+  text-align: left;
+  padding: 2em;
+} */
+
+.card-row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
 }
