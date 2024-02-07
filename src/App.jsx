@@ -5,17 +5,15 @@ import { Outlet } from 'react-router-dom';
 
 function App() {
   return (
-    <>
+    <div className='page-container'>
       <div>
         <Header />
       </div>
-      <div className="">
         <Outlet />
-      </div>
       <div>
         <Footer />
       </div>
-    </>
+    </div>
   )
 };
 

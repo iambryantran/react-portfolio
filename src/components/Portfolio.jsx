@@ -1,7 +1,3 @@
-// Create card component
-// Map over an array of objects (projects)
-import React from 'react';
-// import Card from './Card';
 import Card from 'react-bootstrap/Card';
 
 import { FaGithub } from 'react-icons/fa';
@@ -22,17 +18,16 @@ const Portfolio = () => {
             <div className='card-row'>
                 {projects.map((project) => (
                     <div className="card-container" key={project.id}>
-                        {/* <Card title={project.title} githubLink={project.githubLink}/> */}
-                        <Card style={{ width: '18rem' }}>
-                        <Card.Img src={project.image} alt="Card image" />
-                            <Card.ImgOverlay>
+                        <Card style={{ 
+                            height: '100%', 
+                            background: `url(${project.image}) `, 
+                            backgroundSize: 'cover' 
+                        }}>
                                 <Card.Title>{project.title}</Card.Title>
-                                <Card.Subtitle className="mb-2 text-muted">Card Subtitle</Card.Subtitle>
-                                <Card.Link href="#">Card Link</Card.Link>
+                                <Card.Link href={project.githubLink}>Project Link</Card.Link>
                                 <Card.Link href={project.githubLink}>
                                     <FaGithub />
                                 </Card.Link>
-                            </Card.ImgOverlay>
                         </Card>
                     </div>
                 ))}
