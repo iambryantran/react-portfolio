@@ -1,46 +1,26 @@
-// import { Link } from 'react-router-dom';
-// import { useState } from 'react';
-
-// const Navigation = () => {
-//     return (
-//         <nav className="nav">
-//             <ul>
-//                 <li>
-//                     <Link to="/">About Me</Link>
-//                 </li>
-//                 <li>
-//                     <Link to="/portfolio">Portfolio</Link>
-//                 </li>
-//                 <li>
-//                     <Link to="/contact">Contact</Link>
-//                 </li>
-//                 <li>
-//                     <Link to="/resume">Resume</Link>
-//                 </li>
-//             </ul>
-//         </nav>
-//     );
-// };
-
-// export default Navigation;
-
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
+import React from 'react';
+import { useLocation } from 'react-router-dom';
+import { Container, Nav, Navbar } from 'react-bootstrap';
+import { NavLink } from 'react-router-dom'; // Import NavLink from react-router-dom
 
 const Navigation = () => {
-    return (
+  const location = useLocation(); // Use location to determine the current pathname
+
+  // Custom function to determine if the link is active
+  const checkIsActive = (path) => location.pathname === path ? 'nav-link-active' : '';
+
+  return (
     <>
-        <Navbar bg="dark" data-bs-theme="dark">
-            <Container>
-            <Navbar.Brand href="#home">Bryan Tran</Navbar.Brand>
-            <Nav className="me-auto">
-                <Nav.Link href="/">About Me</Nav.Link>
-                <Nav.Link href="/portfolio">Portfolio</Nav.Link>
-                <Nav.Link href="/contact">Contact</Nav.Link>
-                <Nav.Link href="/resume">Resume</Nav.Link>
-            </Nav>
-            </Container>
+      <Navbar bg="dark" variant="dark">
+        <Container>
+          <Nav className="me-auto">
+            {/* Use NavLink from react-router-dom as "as" prop and apply active class conditionally */}
+            <Nav.Link as={NavLink} to="/" className={checkIsActive('/')}>About Me</Nav.Link>
+            <Nav.Link as={NavLink} to="/portfolio" className={checkIsActive('/portfolio')}>Portfolio</Nav.Link>
+            <Nav.Link as={NavLink} to="/contact" className={checkIsActive('/contact')}>Contact</Nav.Link>
+            <Nav.Link as={NavLink} to="/resume" className={checkIsActive('/resume')}>Resume</Nav.Link>
+          </Nav>
+        </Container>
       </Navbar>
     </>
   );
