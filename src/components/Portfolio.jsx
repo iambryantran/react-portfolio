@@ -20,7 +20,8 @@ const Portfolio = () => {
                         <Card style={{ 
                             height: '100%', 
                             background: `url(${project.image}) `, 
-                            backgroundSize: 'cover' 
+                            backgroundSize: 'cover', 
+                            fontSize: '1.5rem',
                         }}>
                                 <Card.Title>{project.title}</Card.Title>
                                 <Card.Link href={project.githubLink}>Project Link</Card.Link>
