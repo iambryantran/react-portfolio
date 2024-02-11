@@ -1,13 +1,18 @@
 import { useState } from 'react';
+import validateEmail from '../utils/emailvalidation';
 
 const Contact = () => {
     const [name, setName] = useState('');
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
 
-    const handleBlur = (field) => {
+
+
+    const handleBlur = (field, fieldType) => {
         if (field.trim() === '') {
             alert('Please enter a value for the field.');
+        } else if (fieldType === 'email' && !validateEmail(field)) {
+            alert('Please enter a valid email address.');
         }
     };
 
@@ -16,6 +21,9 @@ const Contact = () => {
 
         if (!name.trim() || ! email.trim() || !message.trim()) {
             alert('Please fill in all fields.');
+            return;
+        } else if (!validateEmail(email)) {
+            alert('Please enter a valid email address.');
             return;
         }
 
@@ -51,7 +59,7 @@ const Contact = () => {
                         id="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        onBlur={() => handleBlur(email)}
+                        onBlur={() => handleBlur(email, 'email')}
                     />
                 </div>
                 <div>
