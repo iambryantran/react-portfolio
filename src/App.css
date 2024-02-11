@@ -77,6 +77,15 @@
   width: 100%;
 }
 
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: left;
+  text-align: left;
+  padding: 2em;
+}
+
 .card-row {
   display: flex;
   flex-direction: row;
@@ -108,4 +117,8 @@
   justify-content: space-between;
   align-items: center;
   min-height: 100%;
+}
+
+.portfolio h2 {
+  padding-left: 1em;
 }

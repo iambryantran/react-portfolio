@@ -5,11 +5,17 @@ const Contact = () => {
     const [email, setEmail] = useState('');
     const [message, setMessage] = useState('');
 
+    const handleBlur = (field) => {
+        if (field.trim() === '') {
+            alert('Please enter a value for the field.');
+        }
+    };
+
     const handleSubmit = (e) => {
         e.preventDefault();
 
-        if (message.trim() === '') {
-            alert('Please enter a message.');
+        if (!name.trim() || ! email.trim() || !message.trim()) {
+            alert('Please fill in all fields.');
             return;
         }
 
@@ -25,7 +31,7 @@ const Contact = () => {
     };
 
     return (
-        <div>
+        <div className='contact'>
             <h2>Contact</h2>
             <form onSubmit={handleSubmit}>
                 <div>
@@ -35,6 +41,7 @@ const Contact = () => {
                         id="name"
                         value={name}
                         onChange={(e) => setName(e.target.value)}
+                        onBlur={() => handleBlur(name)}
                     />
                 </div>
                 <div>
@@ -44,6 +51,7 @@ const Contact = () => {
                         id="email"
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
+                        onBlur={() => handleBlur(email)}
                     />
                 </div>
                 <div>
@@ -52,6 +60,7 @@ const Contact = () => {
                         id="message"
                         value={message}
                         onChange={(e) => setMessage(e.target.value)}
+                        onBlur={() => handleBlur(message)}
                     ></textarea>
                 </div>
                 <button type="submit">Submit</button>
