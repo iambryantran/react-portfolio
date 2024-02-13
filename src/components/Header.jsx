@@ -2,7 +2,7 @@ import Navigation from './Navigation';
 
 const Header = () => {
     const headerStyle = {
-        backgroundImage: 'url(../../public/img/banner.jpg)',
+        backgroundImage: 'url(/img/banner.jpg)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
     };
