@@ -3,7 +3,7 @@ const AboutMe = () => {
         <div className="aboutme">
             <h2>About Me</h2>
             <img src="/img/profilepic.png" alt="Bryan Tran" width={150} height={150} />
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum:</p>
+            <p>Yo! I'm Bryan, a Full Stack Developer with a BS in Finance. I enjoy backend development and working with databases, so most of my projects have been focused on data collection and analysis. When I'm not coding, you can find me in the gym, analyzing stocks, spending time with my wife and cats, exploring new places, and playing tennis. I believe in working hard to achieve your goals and build the life you want. Feel free to reach out to me if you have any questions or just want to chat!</p>
         </div>
     );
 };
